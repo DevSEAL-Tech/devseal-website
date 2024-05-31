@@ -9,8 +9,7 @@ import {
 } from "@/components/atom";
 import { NAV_LINKS } from "@/constants";
 import { SealLogoNameExcludedColored } from "@/public/index";
-import React, { useEffect } from "react";
-
+import React, { useCallback, useEffect } from "react";
 
 type Props = {
   close: () => void;
@@ -19,10 +18,18 @@ type Props = {
 };
 
 const NavBarColumn = ({ open, close, isOpen = false }: Props) => {
+  const closeNavBarHandler = useCallback(() => {
+    if (isOpen) {
+      close();
+    }
+  }, [isOpen, close]);
   const navItems = NAV_LINKS.map((items, index) => {
     return (
       <li key={items.id}>
-        <NavLink href={items.pathname}> {items.name}</NavLink>
+        <NavLink href={items.pathname} onClick={closeNavBarHandler}>
+          {" "}
+          {items.name}
+        </NavLink>
       </li>
     );
   });
@@ -34,11 +41,12 @@ const NavBarColumn = ({ open, close, isOpen = false }: Props) => {
     } else {
       document.body.classList.remove(disableScrollClss);
     }
-  });
+  }, [isOpen]);
+
   return (
     <Column className="gap-[2.5rem] absolute top-0 left-0 w-full z-[999] px-10 pt-[2.5rem] bg-white">
       <Row className="justify-between gap-[2.5rem]">
-        <SealLogoNameExcludedColored/>
+        <SealLogoNameExcludedColored />
         {!isOpen ? (
           <HamburgerBtn onClick={open} />
         ) : (

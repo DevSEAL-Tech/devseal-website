@@ -10,6 +10,8 @@ import MarqueeScroll from "./marquee-scroll";
 import Card from "./card";
 import BodyText from "./body-text";
 import ScrollToTop from "./to-top";
+import Center from "./center";
+import Avatar from "./Avatar";
 export {
   NavLink,
   Container,
@@ -22,5 +24,7 @@ export {
   MarqueeScroll,
   Card,
   BodyText,
-  ScrollToTop
+  ScrollToTop,
+  Center,
+  Avatar
 };

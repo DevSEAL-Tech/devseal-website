@@ -3,7 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Footer, NavBar, ScrollToTop } from "@/components";
 
-const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
+const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], weight:["200","300", "400", "500",  "600", "700", "800"] });
 
 export const metadata: Metadata = {
   title: "DevSEAL Technology Inc.",
