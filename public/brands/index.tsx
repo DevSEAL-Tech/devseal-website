@@ -87,7 +87,7 @@ export const UnileverLogoImage = (props: NewImageProp) => {
     <Image
       src={UnileverImage}
       alt="Unilever Logo"
-      placeholder={"blur"}
+      placeholder={"empty"}
       {...props}
     />
   );

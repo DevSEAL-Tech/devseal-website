@@ -13,7 +13,7 @@ const NavLink = ({ children, ...props }: Props) => {
   const isActive = `${
     typeof props.href === "string" &&
     (pathname.startsWith(props.href) ? "text-seal-primary-100" : "")
-  }`;
+  }`; console.log(props.href)
   return (
     <Link
       {...props}

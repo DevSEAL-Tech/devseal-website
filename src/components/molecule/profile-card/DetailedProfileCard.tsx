@@ -3,13 +3,15 @@ import { DevSealLogoFullOpacity } from "@/public/index";
 import Image, { ImageProps } from "next/image";
 import React, { HTMLAttributes } from "react";
 type CardProp = HTMLAttributes<HTMLDivElement>;
-type NewImageProp = Omit<ImageProps, "alt" | "placeholder">
-type Props = CardProp & NewImageProp & {
-  image?: string;
-  about?: string;
-  position?: string;
-  name?: string;
-};
+type NewImageProp = Omit<ImageProps, "alt" | "placeholder">;
+type Props = CardProp &
+  NewImageProp & {
+    image?: string;
+    about?: string;
+    position?: string;
+    name?: string;
+    variant?: "primary" | "secondary";
+  };
 
 const DetailedProfileCard = ({
   src,
@@ -17,41 +19,49 @@ const DetailedProfileCard = ({
   name,
   position,
   className,
+  variant = "primary",
   ...props
 }: Props) => {
   return (
-    <div className={`${className}`}>
     <Card
       {...props}
-      variant="secondary"
+      variant={variant}
       rounded="lg"
-      className={`shadow-lg relative max-w-[40.3rem] max-[53.4rem] w-full h-full  overflow-hidden  z-10 after:absolute after:top-0 after:left-0 after:w-full afte:h-full after:z-20 after:from-black after:to-transparent`}
+      className={`${className} shadow-2xl  w-[200%] h-[350%] z-50 overflow-hidden`}
     >
-      <article className="absolute bottom-0 left-0 w-full px-[3rem] pb-[8.3rem]">
+      <article className="absolute bottom-0 left-0 w-full px-[3rem] pb-[2.3rem] z-50 flex items-end text-white">
         <span>
-          <Title variant="xs" type="h3" className="font-[600]">
-            {name}
-          </Title>
-          <BodyText>{position}</BodyText>
+          <span>
+            <Title variant="xs" type="h3" className="font-[600]">
+              {name}
+            </Title>
+            <BodyText>{position}</BodyText>
+          </span>
+          {about?.split(".").map((items, index) => (
+            <BodyText key={index} className="mt-[2.5rem]">
+              {items + "."}
+            </BodyText>
+          ))}
         </span>
       </article>
-      <figure className="w-full h-full items-center justify-center flex">
+      <figure className="w-full h-full relative after:absolute after:from-black after:to-transparent after:bg-gradient-to-t after:w-full after:h-full after:z-10 items-center justify-center flex">
         {src && (
           <Image
             src={src}
             alt={name ? name : ""}
             placeholder="blur"
             quality={100}
-            className="w-full object-cover"
+            className="w-[60rem] h-[60rem] object-cover absolute bottom-0 right-0"
           />
         )}
       </figure>
-      <figure className="mt-[5.6rem]  items-end justify-end absolute bottom-0 hidden sm:flex right-0">
+      <figure className="mt-[5.6rem] items-end justify-end absolute bottom-0 hidden opacity-30 sm:flex right-0">
         <DevSealLogoFullOpacity />
       </figure>
+      <figure className="mt-[5.6rem] absolute -bottom-20 hidden opacity-30  rotate-[90deg] -z-10 -left-[40rem] sm:flex right-0">
+        <DevSealLogoFullOpacity/>
+      </figure>
     </Card>
-    </div>
-
   );
 };
 

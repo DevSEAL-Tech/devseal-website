@@ -4,24 +4,31 @@ import React from "react";
 
 type Props = {
   className?: string;
+  title?: string;
+  cta?: {
+    text: string | React.ReactNode;
+    link: string;
+  };
 };
 
-const HelpCard = ({ className }: Props) => {
+const HelpCard = ({ title = "", cta, className }: Props) => {
   return (
     <Card
       variant="primary"
-      className={`px-[8.9rem] py-[5.8rem] ${className} relative`}
+      className={`px-[8.9rem] py-[5.8rem] ${className} overflow-hidden relative`}
     >
       <Column className="gap-[4.6rem] items-start max-w-[44rem]">
         <Title
           variant="1xl"
           className="text-white font-[500] leading-[4.44rem]"
         >
-          How may our SEALs be of help to you?
+          {title}
         </Title>
-        <Button variant="secondary" href={"/"}>
-          Talk to the SEALs
-        </Button>
+        {cta && (
+          <Button variant="secondary" href={cta.link}>
+            {cta.text}
+          </Button>
+        )}
       </Column>
       <figure className="max-w-[30.8rem] absolute bottom-0 right-0 w-full">
         <DevSealLogoReducedOpacity />

@@ -13,13 +13,13 @@ const OurStory = (props: Props) => {
       variant="lg"
       className="leading-[2.6rem] text-seal-primary-100"
     >
-      {paragraph}.
+      {paragraph}
     </BodyText>
   ));
   return (
     <Container>
       <Story />
-      <figure className="my-[2.5rem]">
+      <figure className="my-[2.5rem] flex items-center justify-center w-full">
         <CountryIllustraionImage />
       </figure>
       <Column className="gap-[2.5rem]">{paragraphs}</Column>

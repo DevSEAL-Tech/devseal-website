@@ -8,7 +8,7 @@ const outfit = Outfit({subsets:["latin"]})
 type Props = {};
 
 const NavBar = (props: Props) => {
-  const isAboveMediumScreens = useMediaQuery("(min-width: 900px)");
+  const isAboveMediumScreens = useMediaQuery("(min-width: 941px)");
   const [isNavOpen, setIsNavOpen] = useState(false);
   const handleToggleNav = useCallback(() => {
     setIsNavOpen((prev) => !prev);
