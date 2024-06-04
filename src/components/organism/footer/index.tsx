@@ -7,6 +7,7 @@ import {
   SubLinks,
   Summary,
 } from "@/components/molecule";
+import { FOOTER_DATA } from "@/constants";
 import { useMediaQuery } from "@/hooks";
 import { SealLogo } from "@/public/index";
 import React from "react";
@@ -15,12 +16,20 @@ type Props = {};
 
 const Footer = (props: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 600px)");
+  const items = Object.values(FOOTER_DATA.trustee_section.trustedBrandImages);
 
   return (
     <footer className="mt-auto">
       <Container>
-        <BrandThatTrustUs />
-        <HelpCard className="mt-[11.2rem] mb-[15.9rem]" />
+        <BrandThatTrustUs
+          title={FOOTER_DATA.trustee_section.title}
+          images={items}
+        />
+        <HelpCard
+          className="mt-[11.2rem] mb-[15.9rem]"
+          title={FOOTER_DATA.help_section.title}
+          cta={FOOTER_DATA.help_section.cta}
+        />
         {!isAboveMediumScreens ? (
           <>
             <Column className="gap-[2.5rem]">

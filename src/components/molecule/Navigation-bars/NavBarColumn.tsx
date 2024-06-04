@@ -55,7 +55,7 @@ const NavBarColumn = ({ open, close, isOpen = false }: Props) => {
       </Row>
       <div
         className={`overflow-hidden bg-white w-full px-10  ${
-          isOpen ? "h-auto py-0" : "h-0 py-4"
+          isOpen ? "h-full py-4" : "h-0 "
         } transition-all duration-300`}
       >
         <ul className="mb-[2.5rem]">

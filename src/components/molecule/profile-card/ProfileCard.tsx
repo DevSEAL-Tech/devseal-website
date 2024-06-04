@@ -11,7 +11,7 @@ type Props = NewImageProp & {
 const ProfileCard = ({ name, position, src, ...props }: Props) => {
   return (
     <Card rounded="lg" variant="secondary" className="p-[1.259rem]" {...props}>
-      <Column className="items-start gap-[1.7rem]">
+      <Column className="items-center xs:items-start gap-[1.7rem]">
         {src && (
           <Avatar
             alt={name ? name : ""}
@@ -20,7 +20,7 @@ const ProfileCard = ({ name, position, src, ...props }: Props) => {
             size="4xl"
           />
         )}
-        <article className="text-seal-primary-100">
+        <article className="text-center xs:text-left text-seal-primary-100">
           <BodyText variant="xs" className="font-600">
             {name}
           </BodyText>
