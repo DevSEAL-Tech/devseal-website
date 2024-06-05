@@ -6,41 +6,46 @@ import DeavSealLogoWithoutTheName from "./devseal-logo.png";
 import DevSealLogoOulinedWithoutTheName from "./devseal-logo-outline.png";
 import DSFullOpacity from "./devseal-logo-full-opacity.png";
 import Image, { ImageProps } from "next/image";
-import SealAgentSmall from './seal-small.svg'
-import SealAgentLg from './sealLarge.svg'
-import MapImageLarge from './mapImage.png'
-import DevsealTeamImage from './devsealTeam.png'
-import CountryIllustraion from './country-illustrate.png';
-import TiedSvg from './tied.png'
-import VisionAfircaImage from './vision-africa.png'
-import AiHandImage from './Ai-hand.jpg'
-import SealsIconInvertedLogo from './seals-icon-inverted.svg'
+import SealAgentSmall from "./seal-small.svg";
+import SealAgentLg from "./sealLarge.svg";
+import MapImageLarge from "./mapImage.png";
+import DevsealTeamImage from "./devsealTeam.png";
+import CountryIllustraion from "./country-illustrate.png";
+import TiedSvg from "./tied.png";
+import VisionAfircaImage from "./vision-africa.png";
+import AiHandImage from "./Ai-hand.jpg";
+import SealsIconInvertedLogo from "./seals-icon-inverted.svg";
+import IndustryHeroImage from "./industry-hero-image.png";
+import MapIndustryLogo from "./mapIndustry.svg";
 
-export * from './brands'
-export * from './social-icons'
-export * from './seal-engineers'
-export * from './ai-infastructure'
-export * from './cloud'
-export * from './cloud-2'
-export * from './cloud-data-storage'
-export * from './cloud-storage'
-export * from './data-service'
-export * from './data-visualization'
-export * from "./data-warehouse"
-export * from './database'
-export * from './erp'
-export * from './erp-2'
-export * from './framework'
-export * from './mobile-app'
-export * from './new-product-logos'
-export * from './programming-languages'
+export * from "./brands";
+export * from "./social-icons";
+export * from "./seal-engineers";
+export * from "./ai-infastructure";
+export * from "./cloud";
+export * from "./cloud-2";
+export * from "./cloud-data-storage";
+export * from "./cloud-storage";
+export * from "./data-service";
+export * from "./data-visualization";
+export * from "./data-warehouse";
+export * from "./database";
+export * from "./erp";
+export * from "./erp-2";
+export * from "./framework";
+export * from "./mobile-app";
+export * from "./new-product-logos";
+export * from "./programming-languages";
+export * from './industries-icon';
 
 type NewImageProp = Omit<ImageProps, "src" | "placeholder" | "alt">;
 type prop = SVGProps<SVGSVGElement>;
 
-
 export const SealLogo = (props: prop) => {
   return <DevSealLogo {...props} />;
+};
+export const MapIndustry = (props: prop) => {
+  return <MapIndustryLogo {...props} />;
 };
 
 export const SealsInvertedIcon = (props: prop) => {
@@ -62,14 +67,7 @@ export const SealAgentLarge = (props: prop) => {
   return <SealAgentLg {...props} />;
 };
 export const Tied = (props: NewImageProp) => {
-  return (
-    <Image
-      src={TiedSvg}
-      alt="Tied"
-      placeholder={"empty"}
-      {...props}
-    />
-  );
+  return <Image src={TiedSvg} alt="Tied" placeholder={"empty"} {...props} />;
 };
 export const VisionAfrica = (props: NewImageProp) => {
   return (
@@ -113,9 +111,19 @@ export const SealImage = (props: NewImageProp) => (
 );
 
 export const CountryIllustraionImage = (props: NewImageProp) => (
-  <Image src={CountryIllustraion} alt="countries" placeholder="blur" {...props} />
+  <Image
+    src={CountryIllustraion}
+    alt="countries"
+    placeholder="blur"
+    {...props}
+  />
 );
 
 export const AiHand = (props: NewImageProp) => (
   <Image src={AiHandImage} alt="AI" placeholder="blur" {...props} />
 );
+
+export const IndustryImageHero = (props: NewImageProp) => (
+  <Image src={IndustryHeroImage} alt="industry" placeholder="blur" {...props} />
+);
+

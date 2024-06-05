@@ -33,7 +33,7 @@ export {
   BecomeASealCard,
   DetailedProfileCard,
   ProfileCard,
-  ServiceCard,
+  ServiceCard,IndustryCard
 } from "./molecule";
 
 export {
@@ -48,5 +48,8 @@ export {
   ServiceHero,
   ServiceAndTechnology,
   Developer,
-  CloudSection,DataEngineeringSection
+  CloudSection,
+  DataEngineeringSection,
+  IndustriesHero,
+  IndustriesSubSection,
 } from "./organism";
