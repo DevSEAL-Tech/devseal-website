@@ -7,6 +7,7 @@ type Props = {
   buttonText?: string;
   onClickButton?: () => void;
   href?: string | {};
+  size?: "xs" | "sm" | "md" | "lg" | "xl" | "1xl" | "2xl" | "3xl" | "4xl";
 };
 
 const BecomeASealCard = ({
@@ -14,6 +15,7 @@ const BecomeASealCard = ({
   title = "",
   buttonText = "",
   href = "*",
+  size = "sm",
   ...props
 }: Props) => {
   return (
@@ -22,10 +24,10 @@ const BecomeASealCard = ({
       className="px-[2.7rem] py-[3.3rem] w-full"
       rounded="lg"
     >
-      <Column className="justify-between items-start h-full">
+      <Column className="justify-between h-full">
         <span>
           <SealAgentLarge />
-          <Title className="mt-[1rem] text-white max-w-[30rem]" variant="sm">
+          <Title className="mt-[1rem] text-white max-w-[44rem]" variant={size}>
             {title}
           </Title>
         </span>

@@ -12,6 +12,7 @@ import VisionCard from "./vision-card";
 import MissionCard from "./mission-card";
 import { ProfileCard, DetailedProfileCard } from "./profile-card";
 import BecomeASealCard from "./become-a-seal";
+import ServiceCard from "./service-card";
 
 export {
   NavBarRow,
@@ -30,4 +31,5 @@ export {
   ProfileCard,
   BecomeASealCard,
   DetailedProfileCard,
+  ServiceCard
 };

@@ -12,6 +12,8 @@ import BodyText from "./body-text";
 import ScrollToTop from "./to-top";
 import Center from "./center";
 import Avatar from "./Avatar";
+import Circle from "./circle";
+
 export {
   NavLink,
   Container,
@@ -26,5 +28,6 @@ export {
   BodyText,
   ScrollToTop,
   Center,
-  Avatar
+  Avatar,
+  Circle
 };

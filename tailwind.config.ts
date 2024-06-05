@@ -25,6 +25,7 @@ const config: Config = {
         "seal-primary-50" : 'rgba(2, 69, 253, 0.2)',
         "seal-primary-100" : "#0245FD",
         "seal-secondary-100" : "#CCDAFF",
+        "seals-tertiary-100" : "#B7F0FF",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

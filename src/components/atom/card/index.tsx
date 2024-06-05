@@ -1,6 +1,6 @@
 "use client";
 import React, { HTMLAttributes, useMemo } from "react";
-type CardProp = HTMLAttributes<HTMLDivElement>;
+export type CardProp = HTMLAttributes<HTMLDivElement>;
 type Props = CardProp & {
   variant?: "primary" | "secondary";
   rounded?: "xs" | "sm" | "lg";

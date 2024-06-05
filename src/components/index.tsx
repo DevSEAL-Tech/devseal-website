@@ -13,6 +13,7 @@ export {
   ScrollToTop,
   Center,
   Avatar,
+  Circle,
 } from "./atom";
 
 export {
@@ -32,6 +33,7 @@ export {
   BecomeASealCard,
   DetailedProfileCard,
   ProfileCard,
+  ServiceCard,
 } from "./molecule";
 
 export {
@@ -42,5 +44,9 @@ export {
   OurStory,
   TiedExplained,
   MissionAndVision,
-  TheSeals
+  TheSeals,
+  ServiceHero,
+  ServiceAndTechnology,
+  Developer,
+  CloudSection,DataEngineeringSection
 } from "./organism";
