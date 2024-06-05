@@ -11,6 +11,8 @@ import ServiceAndTechnology from "./service-technology";
 import Developer from "./developers";
 import CloudSection from "./cloud-section";
 import DataEngineeringSection from "./data-engineering-section";
+import IndustriesHero from "./industries-hero";
+import IndustriesSubSection from "./industries-sub-section";
 
 export {
   NavBar,
@@ -24,5 +26,7 @@ export {
   ServiceAndTechnology,
   Developer,
   CloudSection,
-  DataEngineeringSection
+  DataEngineeringSection,
+  IndustriesHero,
+  IndustriesSubSection,
 };

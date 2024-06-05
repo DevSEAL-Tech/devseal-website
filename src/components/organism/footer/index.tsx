@@ -19,7 +19,7 @@ const Footer = (props: Props) => {
   const items = Object.values(FOOTER_DATA.trustee_section.trustedBrandImages);
 
   return (
-    <footer className="mt-auto">
+    <footer className="mt-auto w-full bg-white">
       <Container>
         <BrandThatTrustUs
           title={FOOTER_DATA.trustee_section.title}
