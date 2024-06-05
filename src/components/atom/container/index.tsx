@@ -4,7 +4,7 @@ type Props = DivProp & {}
 
 const Container = ({children,className, ...props}: Props) => {
   return (
-    <section {...props} className={`${className} max-w-[120rem] mx-auto px-10`}>{children}</section>
+    <section {...props} className={`${className} max-w-[120rem] mx-auto px-6`}>{children}</section>
   )
 }
 

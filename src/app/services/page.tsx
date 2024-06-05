@@ -1,11 +1,17 @@
-import React from 'react'
+import { ServiceHero, ServiceAndTechnology, Developer, CloudSection ,DataEngineeringSection } from "@/components";
 
-type Props = {}
+type Props = {};
 
 const Services = (props: Props) => {
   return (
-    <div></div>
-  )
-}
+    <main>
+      <ServiceHero />
+      <ServiceAndTechnology />
+      <Developer />
+      <CloudSection/>
+      <DataEngineeringSection/>
+    </main>
+  );
+};
 
-export default Services
+export default Services;

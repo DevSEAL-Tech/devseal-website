@@ -13,9 +13,27 @@ import DevsealTeamImage from './devsealTeam.png'
 import CountryIllustraion from './country-illustrate.png';
 import TiedSvg from './tied.png'
 import VisionAfircaImage from './vision-africa.png'
+import AiHandImage from './Ai-hand.jpg'
+import SealsIconInvertedLogo from './seals-icon-inverted.svg'
+
 export * from './brands'
 export * from './social-icons'
 export * from './seal-engineers'
+export * from './ai-infastructure'
+export * from './cloud'
+export * from './cloud-2'
+export * from './cloud-data-storage'
+export * from './cloud-storage'
+export * from './data-service'
+export * from './data-visualization'
+export * from "./data-warehouse"
+export * from './database'
+export * from './erp'
+export * from './erp-2'
+export * from './framework'
+export * from './mobile-app'
+export * from './new-product-logos'
+export * from './programming-languages'
 
 type NewImageProp = Omit<ImageProps, "src" | "placeholder" | "alt">;
 type prop = SVGProps<SVGSVGElement>;
@@ -23,6 +41,10 @@ type prop = SVGProps<SVGSVGElement>;
 
 export const SealLogo = (props: prop) => {
   return <DevSealLogo {...props} />;
+};
+
+export const SealsInvertedIcon = (props: prop) => {
+  return <SealsIconInvertedLogo {...props} />;
 };
 
 export const SealLogoNameExcluded = (props: prop) => {
@@ -92,4 +114,8 @@ export const SealImage = (props: NewImageProp) => (
 
 export const CountryIllustraionImage = (props: NewImageProp) => (
   <Image src={CountryIllustraion} alt="countries" placeholder="blur" {...props} />
+);
+
+export const AiHand = (props: NewImageProp) => (
+  <Image src={AiHandImage} alt="AI" placeholder="blur" {...props} />
 );
