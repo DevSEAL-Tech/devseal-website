@@ -1,24 +1,16 @@
-"use client";
-import { NAV_LINKS } from "@/constants";
-import { usePathname } from "next/navigation";
-import React, { useEffect } from "react";
+import { ContactUsHeader } from "@/components";
 
 type Props = {};
 
 const ContactUs = (props: Props) => {
-  const pathname = usePathname();
-  useEffect(() => {
-    if (
-      pathname.trim().toLowerCase() ===
-      NAV_LINKS[5].pathname.trim().toLowerCase()
-    ) {
-      document.body.classList.add("bg-seal-secondary-100");
-    } else {
-      document.body.classList.remove("bg-seal-secondary-100");
-    }
-  }, [pathname]);
-
-  return <div></div>;
+  return (
+    <>
+      <header className="mt-[11.8rem] mb-[13.4rem]">
+        <ContactUsHeader />
+      </header>
+      <main className=" w-full bg-white"></main>
+    </>
+  );
 };
 
 export default ContactUs;

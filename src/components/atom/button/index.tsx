@@ -16,19 +16,19 @@ const Button = ({ className, children, variant, ...props }: Props) => {
       case "primary":
         return (
           <Link className={`leading-[2.268rem]`} {...props}>
-            <div className={primaryClasses}>{children}</div>
+            <span className={primaryClasses}>{children}</span>
           </Link>
         );
       case "secondary":
         return (
           <Link className={`leading-[2.268rem]`} {...props}>
-            <div className={secondaryClasses}>{children}</div>
+            <span className={secondaryClasses}>{children}</span>
           </Link>
         );
       default:
         return (
           <Link className={`leading-[2.268rem]`} {...props}>
-            <div className={primaryClasses}>{children}</div>
+            <span className={primaryClasses}>{children}</span>
           </Link>
         );
     }

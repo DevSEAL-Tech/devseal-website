@@ -2,7 +2,7 @@
 import React, { HTMLAttributes, useMemo } from "react";
 export type CardProp = HTMLAttributes<HTMLDivElement>;
 type Props = CardProp & {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "white";
   rounded?: "xs" | "sm" | "lg";
 };
 
@@ -25,6 +25,8 @@ const Card = ({ variant, rounded, className, ...props }: Props) => {
         return "bg-seal-primary-100";
       case "secondary":
         return "bg-seal-secondary-100";
+      case "white":
+        return "bg-white";
       default:
         return "bg-seal-primary-100";
     }

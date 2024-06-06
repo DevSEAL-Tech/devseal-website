@@ -14,6 +14,8 @@ import { ProfileCard, DetailedProfileCard } from "./profile-card";
 import BecomeASealCard from "./become-a-seal";
 import ServiceCard from "./service-card";
 import IndustryCard from "./industry-card";
+import GetInTouch from "./get-in-touch-form";
+import ContactUs from "./Contact Us";
 
 export {
   NavBarRow,
@@ -33,5 +35,7 @@ export {
   BecomeASealCard,
   DetailedProfileCard,
   ServiceCard,
-  IndustryCard
+  IndustryCard,
+  GetInTouch,
+  ContactUs,
 };
