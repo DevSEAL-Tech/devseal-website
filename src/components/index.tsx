@@ -14,6 +14,8 @@ export {
   Center,
   Avatar,
   Circle,
+  CustomInput,
+  CustomTextArea,
 } from "./atom";
 
 export {
@@ -33,7 +35,10 @@ export {
   BecomeASealCard,
   DetailedProfileCard,
   ProfileCard,
-  ServiceCard,IndustryCard
+  ServiceCard,
+  IndustryCard,
+  ContactUs,
+  GetInTouch,
 } from "./molecule";
 
 export {
@@ -52,4 +57,5 @@ export {
   DataEngineeringSection,
   IndustriesHero,
   IndustriesSubSection,
+  ContactUsHeader,
 } from "./organism";

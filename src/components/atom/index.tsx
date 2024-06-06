@@ -13,6 +13,8 @@ import ScrollToTop from "./to-top";
 import Center from "./center";
 import Avatar from "./Avatar";
 import Circle from "./circle";
+import CustomInput from "./input";
+import CustomTextArea from "./custom-textarea";
 
 export {
   NavLink,
@@ -29,5 +31,7 @@ export {
   ScrollToTop,
   Center,
   Avatar,
-  Circle
+  Circle,
+  CustomInput,
+  CustomTextArea,
 };
