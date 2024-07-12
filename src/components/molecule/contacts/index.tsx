@@ -5,7 +5,7 @@ import { SOCIAL_MEDIA_LINKS } from "@/constants";
 type Props = {};
 
 const Contacts = (props: Props) => {
-  const socialLink = SOCIAL_MEDIA_LINKS.map(({ icon: Icon, id, link }) => (
+  const socialLink = SOCIAL_MEDIA_LINKS.map(({ icon: Icon, id, link }) => link.includes("linkedin") &&(
     <NavLink key={id} href={link}>
       <Icon />
     </NavLink>
