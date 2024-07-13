@@ -32,13 +32,13 @@ export const NAV_LINKS: INavLinks = [
     subLinks: [
       {
         id: "0",
-        pathname: "artificial-intelligence-and-machine-learning",
+        pathname: "/services/artificial-intelligence-and-machine-learning",
         name: "Artificial intelligence/Machine Learning",
         icon: TerminalSvg,
       },
       {
         id: "1",
-        pathname: "Product-Development-Services",
+        pathname: "/services/Product-Development-Services",
         name: "Product Development Services",
         icon: RocketSvg,
       },

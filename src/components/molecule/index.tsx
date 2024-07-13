@@ -19,6 +19,8 @@ import BookConsultationForm from "./book-consultation"
 import HeroSlider from "./slide";
 import StayInformed
  from "./stay-informed-card";
+import SlideBox from "./SlideBox";
+
 export {
   NavBarRow,
   NavBarColumn,
@@ -41,5 +43,6 @@ export {
   ConnectWithUS,
   BookConsultationForm,
   HeroSlider,
-  StayInformed
+  StayInformed,
+  SlideBox
 };

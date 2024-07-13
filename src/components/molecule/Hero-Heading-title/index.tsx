@@ -8,7 +8,7 @@ import {
 } from "@/components/atom";
 
 type Props = {
-  title?: string;
+  title?: React.ReactNode;
   subtitle?: string;
   label?: string;
   type?: "center" | "left";

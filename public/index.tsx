@@ -50,6 +50,7 @@ export * from "./tied";
 export * from "./Service-Links";
 export * from "./Home-slide-image";
 export * from "./AL";
+export * from "./ai-ml-images"
 
 export const SealLogo = (props: prop) => {
   return <DevSealLogo {...props} />;

@@ -38,8 +38,7 @@ const HeroSlider = ({ images, ...props }: Props) => {
         {Object.values(images).length > 1 && (
           <div className="relative w-full h-full">{image}</div>
         )}
-
-        {Object.values(images).length <= 1 && <FirstImage />}
+        {Object.values(images).length <= 1 && <FirstImage className="w-full h-full object-cover"/>}
       </figure>
       <ul>
         <Row className="items-center absolute bottom-10 left-1/2 -translate-x-1/2 gap-[.8rem]">
@@ -47,10 +46,12 @@ const HeroSlider = ({ images, ...props }: Props) => {
             return (
               <li key={idx} className="z-50">
                 <ImageEl className="hidden" />
-                <SlideButton
-                  isActive={idx === slideTimeout}
-                  onClick={() => handleSingleSlide(idx)}
-                />
+                {Object.values(images).length <= 1 ? null : (
+                  <SlideButton
+                    isActive={idx === slideTimeout}
+                    onClick={() => handleSingleSlide(idx)}
+                  />
+                )}
               </li>
             );
           })}

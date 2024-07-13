@@ -9,6 +9,7 @@ import {
 } from "@/components/atom";
 import { NAV_LINKS } from "@/constants";
 import { SealLogoNameExcludedColored } from "@/public/index";
+import Link from "next/link";
 import React, { useCallback, useEffect, useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 
@@ -93,7 +94,9 @@ const NavBarColumn = ({ open, close, isOpen = false }: Props) => {
     >
       <span>
         <Row className="justify-between gap-[2.5rem]">
+          <Link href={"/"}>
           <SealLogoNameExcludedColored />
+          </Link>
           {!isOpen ? (
             <HamburgerBtn onClick={open} />
           ) : (
