@@ -27,7 +27,7 @@ const ProfileCard = ({
       className="py-[2.4rem] h-full min-w-[18rem] relative px-[1.2rem]"
       {...props}
     >
-      <Link href={linkedInUrl}>
+      <Link href={linkedInUrl} target="_blank">
         {isHovered  ? <LinkedInSvgHovered  className="absolute top-4 right-4"/> : <LinkedInSvg  className="absolute top-4 right-4"/>}
       </Link>
       <Column className="items-center xs:items-start gap-[.8rem]">
