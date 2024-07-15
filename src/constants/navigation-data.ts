@@ -42,13 +42,19 @@ export const NAV_LINKS: INavLinks = [
         name: "Product Development Services",
         icon: RocketSvg,
       },
+      {
+        id: "2",
+        pathname: "/services/data-management",
+        name: "Data Management",
+        icon: RocketSvg,
+      },
     ],
   },
-  // {
-  //   id: "3",
-  //   pathname: "/industries",
-  //   name: "Industries"
-  // },
+  {
+    id: "3",
+    pathname: "/industries",
+    name: "Industries"
+  },
   // {
   //   id: "4",
   //   pathname: "/press",

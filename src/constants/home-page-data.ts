@@ -24,13 +24,28 @@ import { BulbSvgIcon, ColorWandSvgIcon, ExtensionPuzzleSvgIcon, EyeSvgIcon, Serv
 export const HOME_PAGE_CONTENTS = {
   hero: {
     title: "Your Premier Software Development Team!",
+    titles: [
+      "Artificial Intelligence and Machine Learning",
+      "Software Product Development",
+      "Your Premier Software Development Team!"
+    ],
     subtitle:
       "From Startups to Industry Leaders, We are Your Technological Partner",
     image: HeroSlideImages,
-    cta:{
-      text:"learn more",
-      pathname:""
-    }
+    cta: [
+      {
+        text:"learn more",
+        pathname:"/services/artificial-intelligence-and-machine-learning"
+      },
+      {
+        text:"learn more",
+        pathname:"services/Product-Development-Services"
+      },
+      {
+        text:"learn more",
+        pathname:"/about-us"
+      }
+    ]
   },
   sectionFour:{
     title: "AI/ML Development Services",
@@ -76,7 +91,7 @@ export const HOME_PAGE_CONTENTS = {
     
   },
   sectionOne: {
-    title: "What We Excel At",
+    title: "Software Product Development",
     sectionItems: [
       {
         id: "2",

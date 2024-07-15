@@ -20,6 +20,8 @@ import HeroSlider from "./slide";
 import StayInformed
  from "./stay-informed-card";
 import SlideBox from "./SlideBox";
+import Services from "./devseal-services";
+import PrivacySecurity from "./privacy-security";
 
 export {
   NavBarRow,
@@ -44,5 +46,7 @@ export {
   BookConsultationForm,
   HeroSlider,
   StayInformed,
-  SlideBox
+  SlideBox,
+  Services,
+  PrivacySecurity
 };

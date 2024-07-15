@@ -1,7 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { NewImageProp } from "@/public/index";
-import { Row, SlideButton } from "@/components/atom";
+import { Column, Row, SlideButton } from "@/components/atom";
+import HeroHeadingTitle from "../Hero-Heading-title";
+import { HOME_PAGE_CONTENTS } from "@/constants/home-page-data";
 
 type Images = (prop: NewImageProp) => JSX.Element;
 type Props = {
@@ -14,9 +16,8 @@ const HeroSlider = ({ images, ...props }: Props) => {
   const image = Object.values(images).map((Img, idx) => (
     <Img
       key={idx}
-      className={`absolute top-0 left-0 w-full h-full ${
-        slideTimeout === idx ? "translate-x-0" : "translate-x-full"
-      } transition-transform duration-500 object-cover`}
+      className={`absolute top-0 left-0 w-full h-full ${slideTimeout === idx ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-500 object-cover`}
     />
   ));
 
@@ -34,11 +35,22 @@ const HeroSlider = ({ images, ...props }: Props) => {
   const FirstImage = Object.values(images)[0];
   return (
     <>
-      <figure className="absolute top-0 w-full h-full -z-10 bg-black overflow-hidden">
+      <figure className={"absolute top-0 w-full h-full bg-black overflow-hidden " + (Object.values(images).length > 1 ? '-z-0' : '-z-10')}>
+        {Object.values(images).length > 1 && <div className="absolute z-[100] h-full w-full">
+
+          <Column className="h-full min-h-[65svh] justify-center mx-auto max-w-[120rem]">
+            <HeroHeadingTitle
+              title={HOME_PAGE_CONTENTS.hero.titles[slideTimeout]}
+              subtitle={HOME_PAGE_CONTENTS.hero.subtitle}
+              type="left"
+              cta={HOME_PAGE_CONTENTS.hero.cta[slideTimeout]}
+            />
+          </Column>
+        </div>}
         {Object.values(images).length > 1 && (
           <div className="relative w-full h-full">{image}</div>
         )}
-        {Object.values(images).length <= 1 && <FirstImage className="w-full h-full object-cover"/>}
+        {Object.values(images).length <= 1 && <FirstImage className="w-full h-full object-cover" />}
       </figure>
       <ul>
         <Row className="items-center absolute bottom-10 left-1/2 -translate-x-1/2 gap-[.8rem]">

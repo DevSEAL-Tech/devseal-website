@@ -8,7 +8,7 @@ import {
   NavLink,
   Row,
 } from "@/components/atom";
-import { Contacts, Summary } from "@/components/molecule";
+import { Contacts, Summary, Services, PrivacySecurity } from "@/components/molecule";
 import { FOOTER_DATA } from "@/constants";
 import { useMediaQuery } from "@/hooks";
 
@@ -34,6 +34,8 @@ const Footer = (props: Props) => {
             </Column>
             <Column className="gap-[2.5rem] mt-[1.3rem]">
               <Summary />
+              <Services />
+              <PrivacySecurity />
               <Contacts />
             </Column>
           </>
@@ -41,13 +43,12 @@ const Footer = (props: Props) => {
           <>
             <Row className="justify-between items-center">
               <SealLogo />
-              <Button href={FOOTER_DATA.header.CTA.link} variant="primary">
-                {FOOTER_DATA.header.CTA.text}
-              </Button>
             </Row>
             <Row className="gap-[2.5rem] justify-between items-start mt-[1.7rem]">
               <Summary />
-              <Contacts />
+              <Services />
+              <PrivacySecurity />
+              <Contacts position="right"/>
             </Row>
           </>
         )}

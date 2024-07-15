@@ -10,6 +10,7 @@ export * from "./about-us";
 export * from "./contact-us"
 export * from "./book"
 export * from "./ai-ml"
+export * from "./data-management"
 export * from "./product-development-services"
 
 export { NavBar, Footer, SectionHelpCard, BrandThatTrustUs, WhoWeAre };

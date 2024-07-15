@@ -1,6 +1,7 @@
 import Image, { ImageProps } from "next/image";
 import { SVGProps } from "react";
 import DevSealLogo from "./devsealLogo.svg";
+import DevSealLogoWhite from './devseal-logo-white.svg'
 import DevSealLogoNameExcluded from "./devseal-logo-full-opacity.svg";
 import DevSealLogoNameExcludedColored from "./logowithoutNameColored.svg";
 import DeavSealLogoWithoutTheName from "./devseal-logo.png";
@@ -20,6 +21,7 @@ import industriesHeroImage from "./industries-hero-image.jpg";
 import Mission from "./missionImage.svg";
 import LinkedIn from "./LinkedIn.svg";
 import HoveredLinkedIn from "./LinkedInSvgHovered.svg";
+import { motion } from "framer-motion";
 
 export type NewImageProp = Omit<ImageProps, "src" | "placeholder" | "alt">;
 type prop = SVGProps<SVGSVGElement>;
@@ -55,6 +57,11 @@ export * from "./ai-ml-images"
 export const SealLogo = (props: prop) => {
   return <DevSealLogo {...props} />;
 };
+
+export const SealLogoWhite = (props: prop) => {
+  return <DevSealLogoWhite {...props} />;
+};
+
 export const MapIndustry = (props: prop) => {
   return <MapIndustryLogo {...props} />;
 };
