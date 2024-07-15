@@ -63,7 +63,7 @@ const OurVision = (props: Props) => {
           transition={{ duration: 0.2, delay: 0.5 }}
           className="space-y-[1.6rem]"
         >
-          <Title variant="md" type="h3">
+          <Title variant="lg" type="h3">
             {ourVisionContent.articleTwo.title}
           </Title>
           <BodyText variant="xs">{ourVisionContent.articleTwo.body}</BodyText>
@@ -80,10 +80,10 @@ const OurVision = (props: Props) => {
         transition={{ duration: 0.2, delay: 0.5 }}
         className="space-y-[1.6rem] hidden md:block"
       >
-        <Title variant="md" type="h3">
+        <Title variant="lg" type="h3">
           {ourVisionContent.articleOne.title}
         </Title>
-        <BodyText variant="sm">{ourVisionContent.articleOne.body}</BodyText>
+        <BodyText variant="xs">{ourVisionContent.articleOne.body}</BodyText>
       </motion.article>
     )
   );
