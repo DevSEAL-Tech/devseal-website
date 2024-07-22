@@ -15,12 +15,12 @@ const WhoWeAre = (props: Props) => {
           <Title variant="lg" type="h2">{HOME_PAGE_CONTENTS.sectionThree.sectionOne.title}</Title>
           <BodyText variant="md">
             At <b>devSEAL</b> Technologies, we build and deliver world-class digital products to
-            customers around the world. Our team of software engineers, also referred to as <b>"The SEALS"</b>,
+            customers around the world. Our team of software engineers, also referred to as <b>&quot;The SEALs&quot;</b>,
             are uncompromising to our core values of Trust, Integrity, Excellence & Dedication. While we are experts at digital solution
             delivery, we also excel at customer satisfaction as demonstrated in customer feedback & loyalty.
             <br /><br /> We operate from our best cost locations in Africa and the United States, and continue to
             grow our team as we pursue our mission of delivering Information Technology Excellence with Military Precision.
-            <br /> <br /> Let us earn your trust by showing you what our SEAL's are capable of. Reach out today at
+            <br /> <br /> Let us earn your trust by showing you what our SEAL&apos;s are capable of. Reach out today at
             <NavLink href={`mailto:${HOME_PAGE_CONTENTS.sectionThree.sectionOne.email}`} className="text-risd-blue-600 font-bold"> hello@devseal.tech</NavLink>
 
           </BodyText>
